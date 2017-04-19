@@ -6,11 +6,11 @@ homeassistant:
   time_zone: Europe/Istanbul
   unit_system: metric
   elevation: 917
-  customize:
-    zone.home:
-      track_ios: true
-    zone.Work:
-      track_ios: true
+  # customize:
+    # zone.home:
+      # track_ios: true
+    # zone.Work:
+      # track_ios: true
 #  customize: !include customize.yaml
 
 http:
