@@ -1,0 +1,50 @@
+homeassistant:
+  name: Evim
+  latitude: !secret home_lat 
+  longitude: !secret home_lon
+  temperature_unit: C
+  time_zone: Europe/Istanbul
+  unit_system: metric
+  elevation: 917
+  customize:
+    zone.home:
+      track_ios: true
+    zone.Work:
+      track_ios: true
+#  customize: !include customize.yaml
+
+http:
+  api_password: !secret http_password
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home_assistant
+  keepalive: 60
+  username: kerem 
+  password: !secret mqtt_password  
+
+notify:
+  platform: pushbullet
+  api_key: !secret pussbullet_password
+  name: mypushbullet
+
+notify 2:
+  name: iOSApp
+  platform: ios
+  target: !secret iospush_password
+
+automation: !include automation.yaml
+zone: !include zones.yaml
+sensor: !include sensors.yaml
+switch: !include switches.yaml
+device_tracker: !include device_tracker.yaml
+group: !include groups.yaml
+script: !include scripts.yaml
+
+## ACTIVATE ##
+history:
+frontend:
+config:
+sun:
+ios:

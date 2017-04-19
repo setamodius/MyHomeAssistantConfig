@@ -1,0 +1,30 @@
+default_view:
+  view: yes
+  entities:
+    - group.livingroom
+    - group.people
+    - group.environment
+livingroom:
+  name: Oda
+  entities:
+    - sensor.Oda_Aydinlik
+    - switch.Living_Room_Lamp
+    - sensor.modul_durum
+    - automation.aksam_aydinlatma
+people:
+  name: Kisiler
+  entities:    
+    - device_tracker.kerem_iphone
+    - sensor.telefon_pil
+environment:
+  name: Ortam
+  entities:
+    - sun.sun
+    - sensor.owm_condition
+    - sensor.owm_temperature
+    - sensor.owm_humidity
+    - sensor.owm_pressure
+    - sensor.owm_rain
+    - sensor.owm_snow
+    - sensor.owm_wind_speed
+    - sensor.owm_forecast

@@ -1,0 +1,62 @@
+############################################################
+#
+# mqtt Sensors
+#
+############################################################
+
+- platform: mqtt
+  state_topic: "home/livingroom/luminance"
+  name: "Oda Aydinlik"
+  unit_of_measurement: "lux"
+
+
+- platform: mqtt
+  state_topic: "owntracks/kerem/kerem"
+  name: "Telefon Pil"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'
+
+- platform: mqtt
+  state_topic: "home/livingroom/modul/status"
+  name: "Modul Durum"
+  
+#- platform: darksky
+#  api_key: d48c877d07ca115b24bfc27c8eb666d4
+#  monitored_conditions:
+#    - summary
+#    - icon
+#    - nearest_storm_distance
+#    - nearest_storm_bearing
+#    - precip_type
+#    - precip_intensity
+#    - precip_probability
+#    - temperature
+#    - apparent_temperature
+#    - dew_point
+#    - wind_speed
+#    - wind_bearing
+#    - cloud_cover
+#    - humidity
+#    - pressure
+#    - visibility
+#    - ozone
+#    - minutely_summary
+#    - hourly_summary
+#    - daily_summary
+#    - temperature_max
+#    - temperature_min
+#  update_interval:
+#   hours: 1
+   
+- platform: openweathermap
+  api_key: 294d5f3905d7be993a1e74ee15e9e32c
+  forecast: 1
+  monitored_conditions:
+    - weather
+    - temperature
+    - wind_speed
+    - humidity
+    - pressure
+    - clouds
+    - rain
+    - snow

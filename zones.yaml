@@ -1,0 +1,5 @@
+- name: Work
+  latitude: 39.7568129
+  longitude: 30.6779289
+  radius: 250
+  icon: mdi:work

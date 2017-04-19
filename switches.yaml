@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Living Room Lamp"
+  state_topic:   "home/livingroom/lamp/status"
+  command_topic: "home/livingroom/lamp/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off" 

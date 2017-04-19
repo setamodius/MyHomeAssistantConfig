@@ -1,0 +1,28 @@
+default_view:
+  view: yes
+  entities:
+    - group.livingroom
+    - group.people
+    - group.environment
+livingroom:
+  name: Oda
+  entities:
+    - sensor.Oda_Aydinlik
+    - switch.Living_Room_Lamp
+    - sensor.modul_durum
+people:
+  name: Kisiler
+  entities:    
+    - device_tracker.kerem_kerem
+    - sensor.telefon_pil
+environment:
+  name: Ortam
+  entities:
+    - sun.sun
+    - sensor.dark_sky_daily_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.wea
+    - sensor.weather_precip_intensity
+    - sensor.weather_humidity
+

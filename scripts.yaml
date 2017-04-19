@@ -1,0 +1,20 @@
+livingroom_lights_on:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.living_room_lamp
+    - service: notify.mypushbullet
+      data:
+        title: Aydinlatma Acildi
+        message: Isik acildi
+
+livingroom_lights_off:
+  sequence:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.living_room_lamp
+    - service: notify.mypushbullet
+      data:
+        title: Aydinlatma Kapatildi
+        message: Isik kapatildi
+

@@ -1,0 +1,15 @@
+- alias: 'Aksam Aydinlatma'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.oda_aydinlik
+      below: 80
+  condition: 
+    - condition: state
+      entity_id: device_tracker.kerem_iphone
+      state: 'home'
+    - condition: time
+      after: '17:00:00'
+      before: '22:00:00'
+  action:
+    - service: script.livingroom_lights_on  
+    
