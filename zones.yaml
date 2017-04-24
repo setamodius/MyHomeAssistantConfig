@@ -3,3 +3,11 @@
   longitude: 30.6779289
   radius: 500
   icon: mdi:work
+- name: Home
+  latitude: !secret home_lat 
+  longitude: !secret home_lon
+  radius: 500
+  icon: mdi:home
+  friendly_name: Evim
+  
+  
