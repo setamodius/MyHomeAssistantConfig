@@ -8,6 +8,6 @@
   longitude: !secret home_lon
   radius: 500
   icon: mdi:home
-  friendly_name: Evim
+
   
   
