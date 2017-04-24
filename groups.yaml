@@ -16,6 +16,7 @@ people:
   entities:    
     - device_tracker.kerem_iphone
     - sensor.kerem_iphone_battery_level
+    - sensor.kerem_iphone_battery_state
 environment:
   name: Ortam
   entities:
